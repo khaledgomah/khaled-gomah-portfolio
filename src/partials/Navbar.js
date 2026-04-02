@@ -21,6 +21,7 @@ function Navbar() {
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
+          <a href="/Khaled_Gomah_CV.pdf" className="cv-link" download>Download CV</a>
         </div>
       </div>
     </nav>

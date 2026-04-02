@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedinIn, FaRegEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaRegEnvelope, FaWhatsapp, FaPhone } from "react-icons/fa";
 
 function Contact({ social }) {
   return (
@@ -18,9 +18,10 @@ function Contact({ social }) {
               className="contact-link-card"
               data-aos="fade-up"
               data-aos-duration="500"
+              style={{ flex: "1 1 300px", maxWidth: "320px" }}
             >
               <FaRegEnvelope className="contact-icon" />
-              <span className="contact-label">{social.email}</span>
+              <span className="contact-label">Email</span>
             </a>
             <a
               href={social.github}
@@ -30,9 +31,10 @@ function Contact({ social }) {
               data-aos="fade-up"
               data-aos-duration="500"
               data-aos-delay="100"
+              style={{ flex: "1 1 300px", maxWidth: "320px" }}
             >
               <FaGithub className="contact-icon" />
-              <span className="contact-label">github.com/khaledgomah</span>
+              <span className="contact-label">GitHub</span>
             </a>
             {social.linkedin && (
               <a
@@ -43,16 +45,40 @@ function Contact({ social }) {
                 data-aos="fade-up"
                 data-aos-duration="500"
                 data-aos-delay="200"
+                style={{ flex: "1 1 300px", maxWidth: "320px" }}
               >
                 <FaLinkedinIn className="contact-icon" />
                 <span className="contact-label">LinkedIn</span>
               </a>
             )}
-          </div>
-          <div className="contact-cta">
-            <a href={"mailto:" + social.email} className="btn btn-primary">
-              <FaRegEnvelope /> Send me an email
-            </a>
+            {social.phone && (
+              <a
+                href={`https://wa.me/${social.phone.replace('+', '')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-link-card"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="300"
+                style={{ flex: "1 1 300px", maxWidth: "320px" }}
+              >
+                <FaWhatsapp className="contact-icon" />
+                <span className="contact-label">WhatsApp</span>
+              </a>
+            )}
+            {social.phone && (
+              <a
+                href={`tel:${social.phone}`}
+                className="contact-link-card"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="400"
+                style={{ flex: "1 1 300px", maxWidth: "320px" }}
+              >
+                <FaPhone className="contact-icon" />
+                <span className="contact-label">Phone</span>
+              </a>
+            )}
           </div>
         </div>
       </div>

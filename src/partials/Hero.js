@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedinIn, FaRegEnvelope, FaArrowDown } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaRegEnvelope, FaArrowDown, FaWhatsapp, FaPhone } from "react-icons/fa";
 
 function Hero({ name, title, bio, social }) {
   return (
@@ -30,6 +30,9 @@ function Hero({ name, title, bio, social }) {
           <a href="#projects" className="btn btn-primary">
             View Projects
             <FaArrowDown style={{ fontSize: '0.85rem' }} />
+          </a>
+          <a href="/Khaled_Gomah_CV.pdf" className="btn btn-outline" download>
+            Download CV
           </a>
           <a href="#contact" className="btn btn-outline">
             Get In Touch
@@ -66,6 +69,26 @@ function Hero({ name, title, bio, social }) {
               aria-label="Email"
             >
               <FaRegEnvelope />
+            </a>
+          )}
+          {social.phone && (
+            <a
+              href={`https://wa.me/${social.phone.replace('+', '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label="WhatsApp"
+            >
+              <FaWhatsapp />
+            </a>
+          )}
+          {social.phone && (
+            <a
+              href={`tel:${social.phone}`}
+              className="social-link"
+              aria-label="Phone"
+            >
+              <FaPhone />
             </a>
           )}
         </div>

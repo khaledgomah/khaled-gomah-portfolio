@@ -16,8 +16,8 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "npm run watch:css && react-scripts start",
-    "build": "npm run watch:css && react-scripts build",
+    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && npm run watch:css && react-scripts start",
+    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && npm run watch:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"

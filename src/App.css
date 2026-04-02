@@ -429,6 +429,7 @@ img {
   align-items: center;
   justify-content: center;
   gap: 16px;
+  margin-bottom: 60px;
   animation: fadeInUp 0.8s ease 0.5s both;
 }
 
@@ -581,22 +582,29 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  color: var(--accent-primary);
-  transition: all var(--transition-fast);
+  color: var(--text-primary);
+  background: rgba(99, 102, 241, 0.1);
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-smooth);
 }
 
 .project-link:hover {
-  color: var(--accent-secondary);
-  gap: 12px;
+  color: #fff;
+  background: var(--accent-gradient);
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--glow-primary);
 }
 
 .project-link-arrow {
   transition: transform var(--transition-fast);
 }
 
-.project-card:hover .project-link-arrow {
+.project-link:hover .project-link-arrow {
   transform: translateX(4px);
 }
 
@@ -657,7 +665,7 @@ img {
 }
 
 .contact-content {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: center;
 }
@@ -678,7 +686,9 @@ img {
 
 .contact-links {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
   align-items: center;
 }

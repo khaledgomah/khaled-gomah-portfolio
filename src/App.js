@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import "./App.css";
 import Navbar from "./partials/Navbar";
 import Hero from "./partials/Hero";
+import About from "./partials/About";
+import Stats from "./partials/Stats";
 import Projects from "./partials/Projects";
-import Skills from "./partials/Skills";
 import Contact from "./partials/Contact";
 import Footer from "./partials/Footer";
 import data from "./assets/data";
@@ -27,6 +28,8 @@ function App() {
         bio={data.bio}
         social={data.social}
       />
+      <About about={data.about} location={data.social.location} />
+      <Stats stats={data.stats} />
       <Projects projects={data.projects} />
       <Skills skills={data.skills} />
       <Contact social={data.social} />

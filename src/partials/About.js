@@ -1,14 +1,27 @@
 import React from "react";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
-function About({ title, description }) {
+const About = ({ about, location }) => {
   return (
-    <div className="max-w-4xl mx-auto mt-16">
-      <p className="text-2xl md:text-4xl font-bold text-center">{title}</p>
-      <p className="text-base text-left md:text-center text-gray-600 leading-relaxed mt-4">
-        {description}
-      </p>
-    </div>
+    <section className="section about-section" id="about">
+      <div className="section-container">
+        <h2 className="section-title" data-aos="fade-up">
+          About <span className="gradient-text">Me</span>
+        </h2>
+        <div className="about-content" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+          <div className="about-card">
+            <p className="about-text">{about}</p>
+            {location && (
+              <div className="about-location">
+                <FaMapMarkerAlt className="location-icon" />
+                <span>Based in {location}</span>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
   );
-}
+};
 
 export default About;
