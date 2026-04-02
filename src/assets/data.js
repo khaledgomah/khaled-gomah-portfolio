@@ -70,7 +70,7 @@ const data = {
   ],
   projects: [
     {
-      title: "MoVement",
+      title: "Movment",
       description: "Transportation system for the B2B sector with 2,000+ daily active users.",
       tags: ["Flutter", "Firebase", "Clean Architecture"],
       appStore: "https://apps.apple.com/us/app/movment/id6753988460",
@@ -79,7 +79,7 @@ const data = {
       emoji: "🚀",
     },
     {
-      title: "MoVement Supervisor",
+      title: "Movment Supervisor",
       description: "High-performance supervisor system for real-time monitoring and trip management.",
       tags: ["Flutter", "Firebase", "Admin"],
       appStore: "https://apps.apple.com/eg/app/movment-supervisor/id6757249739",
