@@ -16,8 +16,8 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && npm run watch:css && react-scripts start",
-    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && npm run watch:css && react-scripts build",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider npm run watch:css && react-scripts start",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider npm run watch:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "autoprefixer": "9.8.6",
+    "cross-env": "^10.1.0",
     "postcss-cli": "^8.1.0",
     "tailwindcss": "^1.9.2"
   },
