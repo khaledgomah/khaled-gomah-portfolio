@@ -2,14 +2,23 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 
 const Projects = ({ projects }) => {
-    return (
-        <div>
-            <h1 className="mt-8 text-2xl md:text-4xl text-center font-extrabold">My projects</h1>
-            {projects.map((project) => (
-                <ProjectCard project={project} />
-            ))}
+  return (
+    <section className="section projects-section" id="projects">
+      <div className="section-container">
+        <h2 className="section-title">
+          Featured <span className="gradient-text">Projects</span>
+        </h2>
+        <p className="section-subtitle">
+          Here are some of the apps I've built with Flutter, showcasing clean architecture and modern design.
+        </p>
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} index={index} />
+          ))}
         </div>
-    );
+      </div>
+    </section>
+  );
 };
 
 export default Projects;

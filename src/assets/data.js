@@ -1,58 +1,84 @@
 import React from "react";
-import { FaPalette, FaReact, FaCode } from "react-icons/fa";
+import {
+  FaMobileAlt,
+  FaFire,
+  FaGlobe,
+  FaCode,
+  FaLayerGroup,
+} from "react-icons/fa";
 
-const BOOTSTRAP_FOR_SKILL_ICON = "text-4xl mx-auto inline-block";
+const SKILL_ICON_CLASS = "text-2xl";
+
 const data = {
-  name: "Brayden W",
-  title: "Front-End Developer/Designer",
+  name: "Khaled",
+  title: "Flutter Developer",
+  bio: "Building scalable Flutter apps with clean architecture and Firebase",
   social: {
-    github: "https://github.com/BraydenTW",
-    dribbble: "https://github.com/BraydenTW",
-    twitter: "https://github.com/BraydenTW",
-    email: "someone@example.com",
-  },
-  about: {
-    title: "My Background",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper porta pharetra. Nunc porta dui eu mattis laoreet. Quisque lobortis orci sagittis, luctus ligula nec, sagittis leo. Ut convallis eu mi dignissim facilisis. Donec egestas vitae sapien quis bibendum. Sed rhoncus aliquet felis, ac cursus dui varius sit amet. Etiam eu nisi ligula. Sed sagittis massa a metus pulvinar, eu vestibulum nulla molestie. Nullam luctus sit amet felis quis ullamcorper. ",
+    github: "https://github.com/khaledgomah",
+    email: "khaledgomah10@gmail.com",
+    linkedin: "",
   },
   skills: [
     {
-      skillName: "Frontend",
-      skillIcon: <FaCode className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      name: "Flutter",
+      icon: <FaMobileAlt className={SKILL_ICON_CLASS} />,
+      color: "#027DFD",
     },
     {
-      skillName: "Design/UX",
-      skillIcon: <FaPalette className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      name: "Dart",
+      icon: <FaCode className={SKILL_ICON_CLASS} />,
+      color: "#0175C2",
     },
     {
-      skillName: "ReactJS",
-      skillIcon: <FaReact className={BOOTSTRAP_FOR_SKILL_ICON} />,
+      name: "Firebase",
+      icon: <FaFire className={SKILL_ICON_CLASS} />,
+      color: "#FFCA28",
+    },
+    {
+      name: "Clean Architecture",
+      icon: <FaLayerGroup className={SKILL_ICON_CLASS} />,
+      color: "#8B5CF6",
+    },
+    {
+      name: "Localization",
+      icon: <FaGlobe className={SKILL_ICON_CLASS} />,
+      color: "#06B6D4",
     },
   ],
   projects: [
     {
-      title: "React tailwind portfolio",
-      description: "👨‍🎨 An open-source portfolio template built with React and Tailwind.",
-      tags: [
-        "template",
-        "portfolio",
-        "reactjs",
-        "tailwindcss"
-      ],
-      link: "https://github.com/braydentw/react-tailwind-portfolio"
+      title: "MoVement",
+      description: "App for managing workflow and tasks efficiently",
+      tags: ["Flutter", "Firebase", "Clean Architecture"],
+      link: "https://github.com/khaledgomah/MoVement",
+      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      emoji: "🚀",
     },
     {
-      title: "My personal website",
-      description: "⚡ My portfolio built with NextJS and TailwindCSS.",
-      tags: [
-        "website",
-        "portfolio",
-        "nextjs",
-        "tailwindcss"
-      ],
-      link: "https://github.com/braydentW/braydentw"
-    }
-  ]
+      title: "MoVement Supervisor",
+      description: "Supervisor version of MoVement with extra features",
+      tags: ["Flutter", "Firebase", "Admin"],
+      link: "https://github.com/khaledgomah/MoVement-Supervisor",
+      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+      emoji: "👔",
+    },
+    {
+      title: "Castrid",
+      description: "Task management & collaboration platform",
+      tags: ["Flutter", "Dart", "Collaboration"],
+      link: "https://github.com/khaledgomah/Castrid",
+      gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+      emoji: "📋",
+    },
+    {
+      title: "Silent Space",
+      description: "Meditation & focus app built in Flutter",
+      tags: ["Flutter", "Firebase", "Meditation"],
+      link: "https://github.com/khaledgomah/Silent-Space",
+      gradient: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+      emoji: "🧘",
+    },
+  ],
 };
+
 export default data;

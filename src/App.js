@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import About from "./partials/About";
-import Card from "./partials/Card";
-import Footer from "./partials/Footer";
+import Navbar from "./partials/Navbar";
+import Hero from "./partials/Hero";
 import Projects from "./partials/Projects";
 import Skills from "./partials/Skills";
+import Contact from "./partials/Contact";
+import Footer from "./partials/Footer";
 import data from "./assets/data";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -13,20 +14,25 @@ function App() {
   useEffect(() => {
     AOS.init({
       once: true,
+      duration: 600,
     });
-  });
+  }, []);
+
   return (
-    <div className="min-h-screen py-10 px-3 sm:px-5 bg-gray-100">
-      <div data-aos="fade-down" data-aos-duration="800">
-        <Card name={data.name} title={data.title} social={data.social} />
-      </div>
-      <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-        <About title={data.about.title} description={data.about.description} />
-        <Skills skills={data.skills} />
-        <Projects projects={data.projects} />
-        <Footer github={data.social.github} />
-      </div>
+    <div className="portfolio-app">
+      <Navbar />
+      <Hero
+        name={data.name}
+        title={data.title}
+        bio={data.bio}
+        social={data.social}
+      />
+      <Projects projects={data.projects} />
+      <Skills skills={data.skills} />
+      <Contact social={data.social} />
+      <Footer />
     </div>
   );
 }
+
 export default App;
